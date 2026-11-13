@@ -1,16 +1,122 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+# KITING'S BARBERSHOP
 
-Currently, two official plugins are available:
+## Deskripsi Proyek
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Kiting's Barbershop adalah aplikasi website berbasis
+React yang dikembangkan untuk membantu pelanggan
+melihat layanan, produk, dan melakukan reservasi
+layanan barbershop secara online.
 
-## React Compiler
+Website ini menggunakan Supabase sebagai backend
+dan database untuk menyimpan informasi pelanggan,
+layanan, serta produk.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Teknologi yang Digunakan
 
-## Expanding the Oxlint configuration
+- React.js
+- Vite
+- JavaScript (JSX)
+- CSS
+- Supabase
+- Supabase Authentication
+- PostgreSQL
+- Git dan GitHub
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Fitur yang Sudah Dibuat
+
+- Halaman Beranda
+- Daftar Layanan Barbershop
+- Daftar Produk
+- Registrasi Pelanggan
+- Verifikasi Email
+- Login Pelanggan
+- Logout Pelanggan
+- Integrasi Database Supabase
+
+## Fitur dalam Pengembangan
+
+- Sistem Booking Layanan
+- Riwayat Booking Pelanggan
+- Dashboard Pelanggan
+- Dashboard Admin
+- Dashboard Owner
+- Pengelolaan Jadwal Barbershop
+- Laporan Operasional
+
+## Struktur Folder
+
+```text
+kitings-barbershop/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── lib/
+│   │   └── supabaseClient.js
+│   ├── page/
+│   │   ├── login.jsx
+│   │   └── registrasi.jsx
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.jsx
+├── .gitignore
+├── index.html
+├── package.json
+└── vite.config.js
+```
+
+## Cara Menjalankan Website
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/novarius0101-ux/asasasas.git
+```
+
+### 2. Masuk ke Folder Proyek
+
+```bash
+cd asasasas
+```
+
+### 3. Install Dependencies
+
+```bash
+npm install
+```
+
+### 4. Konfigurasi Supabase
+
+Buat file `.env.local` di folder utama proyek.
+
+```env
+VITE_SUPABASE_URL=URL_PROJECT_SUPABASE
+VITE_SUPABASE_PUBLISHABLE_KEY=PUBLISHABLE_KEY_SUPABASE
+```
+
+Gunakan URL dan publishable key dari proyek Supabase
+milikmu. Jangan memasukkan secret key atau password.
+
+### 5. Jalankan Website
+
+```bash
+npm run dev
+```
+
+Buka alamat localhost yang muncul di terminal.
+
+## Keamanan
+
+- Menggunakan Supabase Authentication.
+- Konfigurasi lokal tidak diunggah ke GitHub.
+- Database menggunakan Row Level Security (RLS).
+- Hak akses berdasarkan role sedang dikembangkan.
+
+## Status Pengembangan
+
+Proyek masih dalam tahap pengembangan.
+
+## Repository
+
+https://github.com/novarius0101-ux/asasasas
