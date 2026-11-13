@@ -1,0 +1,369 @@
+
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #302520;
+  background: #faf7f5;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button, a {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 22px 6%;
+  background: #ffffff;
+  box-shadow: 0 2px 10px #0000000a;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 800;
+  color: #57392f;
+}
+
+.logo span {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  font-size: 14px;
+}
+
+.menu a:hover {
+  color: #a16b55;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.auth-buttons button {
+  border: 1px solid #57392f;
+  border-radius: 6px;
+  background: transparent;
+  padding: 10px 16px;
+}
+
+.auth-buttons .btn-primary,
+.btn-booking,
+.card button {
+  background: #57392f;
+  color: white;
+  border: none;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  padding: 80px 8%;
+  background: #eee1da;
+}
+
+.eyebrow, .section-heading p {
+  letter-spacing: 3px;
+  font-size: 12px;
+  color: #96644e;
+  font-weight: bold;
+}
+
+.hero h1 {
+  font-size: clamp(32px, 4vw, 56px);
+  line-height: 1.15;
+  margin: 18px 0;
+}
+
+.hero-content > p:not(.eyebrow) {
+  line-height: 1.8;
+  color: #68564e;
+  max-width: 480px;
+}
+
+.btn-booking {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 26px;
+  border-radius: 7px;
+}
+
+.hero-image {
+  min-height: 330px;
+  background: linear-gradient(135deg, #38241e, #825c49);
+  color: white;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+}
+
+.hero-image span {
+  font-size: 90px;
+}
+
+.hero-image h2 {
+  font-size: 25px;
+  margin-bottom: 0;
+}
+
+.hero-image p {
+  letter-spacing: 3px;
+  font-size: 11px;
+}
+
+.section {
+  padding: 75px 8%;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.section-heading h2 {
+  font-size: 32px;
+  margin: 8px 0;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #e8ded9;
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 5px 18px #00000008;
+}
+
+.card-icon, .product-icon {
+  color: #96644e;
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-size: 20px;
+}
+
+.card p {
+  color: #76665f;
+  line-height: 1.6;
+}
+
+.card h4 {
+  font-size: 20px;
+  color: #57392f;
+}
+
+.card button {
+  padding: 12px 24px;
+  border-radius: 6px;
+}
+
+.products-section {
+  background: #f3ece8;
+}
+
+.info-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding: 50px 8%;
+  background: #e6d5cc;
+}
+
+.footer {
+  text-align: center;
+  padding: 24px;
+  background: #38241e;
+  color: white;
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .menu {
+    justify-content: center;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .card-grid,
+  .info-section {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 55px 6%;
+  }
+
+  .section {
+    padding: 55px 6%;
+  }
+}
+
+
+/* ## Mengatur halaman registrasi agar berada di tengah layar */
+.register-page {
+  min-height: 100vh;
+  background-color: #f3ece8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 16px;
+}
+
+/* ## Membuat kotak formulir berwarna putih */
+.register-box {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 440px;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* ## Mengatur judul formulir */
+.register-box h1 {
+  color: #57392f;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+/* ## Mengatur teks penjelasan */
+.register-box > p {
+  color: #76665f;
+  line-height: 1.5;
+}
+
+/* ## Menyusun input formulir secara vertikal */
+.register-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+/* ## Mengatur tulisan label input */
+.register-box label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #38241e;
+}
+
+/* ## Mengatur tampilan kolom input */
+.register-box input {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #d9d1cc;
+  border-radius: 6px;
+  font-size: 15px;
+  background-color: white;
+  color: #302520;
+}
+
+/* ## Memberikan efek ketika input diklik */
+.register-box input:focus {
+  outline: 2px solid #a16b55;
+  outline-offset: 1px;
+}
+
+/* ## Mengatur tombol Daftar Sekarang */
+.register-box form button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 14px;
+  background-color: #57392f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+/* ## Mengatur tombol ketika registrasi diproses */
+.register-box form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ## Mengatur tombol kembali ke Beranda */
+.register-box .back-button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: #57392f;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+/* ## Menampilkan pesan ketika registrasi gagal */
+.register-error {
+  background: #ffe1e1;
+  color: #a02020;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+/* ## Menampilkan pesan ketika registrasi berhasil */
+.register-success {
+  background: #e0f4e4;
+  color: #176b34;
+  padding: 12px;
+  border-radius: 6px;
+}
